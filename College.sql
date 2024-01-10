@@ -5,6 +5,7 @@ create table student (
     Name varchar (50) ,
     intake int ,
     section varchar (100),
+    marks int ,
     dept varchar (50),
 	email varchar (100),
     phone double,
@@ -18,16 +19,16 @@ create table teacher (
  salary int default 30000
 );
 
-INSERT INTO student (id, Name, intake, section, dept, email, phone, age )
+INSERT INTO student (id, Name, intake, section, marks, dept, email, phone, age )
 VALUES 
-(1, 'Tom B. Eristudentchsen', 50, 'CSE-7', 'CSE', 'asifahammednishst@gmail.com',01789846204,23),
-(2, 'Asif Ahammed', 50, 'CSE-7', 'CSE', 'asifahammednishst@gmail.com',01789846204,23),
-(3, 'Atik Ahammed', 52, 'CSE-7', 'CSE', 'asifahammednishst@gmail.com',01789846204,23),
-(4, 'Alin Ahammed', 52, 'CSE-7', 'CSE', 'asifahammednishst@gmail.com',01789846204,23),
-(5, 'Raju Ahammed', 50, 'CSE-7', 'CSE', 'asifahammednishst@gmail.com',01789846204,23),
-(6, 'Maju Ahammed', 51, 'CSE-7', 'CSE', 'asifahammednishst@gmail.com',01789846204,23),
-(7, 'paku Ahammed', 51, 'CSE-7', 'CSE', 'asifahammednishst@gmail.com',01789846204,23),
-(8, 'saku Ahammed', 50, 'CSE-7', 'CSE', 'asifahammednishst@gmail.com',01789846204,23);
+(1, 'Tom B. Erisd', 50, 'CSE-7', 80 , 'CSE', 'asifahammednishst@gmail.com',01789846204,23),
+(2, 'Asif Ahammed', 50, 'CSE-7', 90 , 'CSE', 'asifahammednishst@gmail.com',01789846204,23),
+(3, 'Atik Ahammed', 52, 'CSE-7', 70 , 'CSE', 'asifahammednishst@gmail.com',01789846204,23),
+(4, 'Alin Ahammed', 52, 'CSE-7', 75 , 'CSE', 'asifahammednishst@gmail.com',01789846204,23),
+(5, 'Raju Ahammed', 50, 'CSE-7', 83 , 'CSE', 'asifahammednishst@gmail.com',01789846204,23),
+(6, 'Maju Ahammed', 51, 'CSE-7', 84 , 'CSE', 'asifahammednishst@gmail.com',01789846204,23),
+(7, 'paku Ahammed', 51, 'CSE-7', 92 , 'CSE', 'asifahammednishst@gmail.com',01789846204,23),
+(8, 'saku Ahammed', 50, 'CSE-7', 78 , 'CSE', 'asifahammednishst@gmail.com',01789846204,23);
 
 INSERT INTO teacher (id, Name, email)
 VALUES 
@@ -35,7 +36,9 @@ VALUES
 (2, 'mahbub ', 'mahbub45@gmail.com');
 
 select * from student ;
+select distinct intake from student;
 select * from teacher ;
 
+drop table student;
 truncate table student ;
 truncate table teacher ;
