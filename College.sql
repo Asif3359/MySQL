@@ -1,5 +1,6 @@
 create database college ;
 use college ;
+-- primary key (id)--
 create table student (
 	id int primary key , 
     Name varchar (50) ,
@@ -35,8 +36,22 @@ VALUES
 (1, 'Rashid ', 'Rashid@gmail.com'),
 (2, 'mahbub ', 'mahbub45@gmail.com');
 
+-- select --
 select * from student ;
+
+-- distinct --
 select distinct intake from student;
+
+-- use  where --
+select * from student where marks >= 80 ;
+select * from student where marks >= 80 and intake=50 ;
+select * from student where marks between 80 and 90 ;
+-- in / not in -- 
+select * from student where marks in (80,81,82,83) ;
+-- limit --
+select * from student where marks >= 70 limit 4 ;
+select * from student order by  marks desc limit 3;
+
 select * from teacher ;
 
 drop table student;
