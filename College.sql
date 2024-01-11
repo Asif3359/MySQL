@@ -52,6 +52,14 @@ select * from student where marks in (80,81,82,83) ;
 select * from student where marks >= 70 limit 4 ;
 select * from student order by  marks desc limit 3;
 
+-- function --
+select max(marks) from student ;
+select min(marks) from student ;
+select count(marks) from student ;
+select sum(marks) from student ;
+select avg(marks) from student ;
+
+
 select * from teacher ;
 
 drop table student;
