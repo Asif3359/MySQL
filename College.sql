@@ -59,6 +59,8 @@ select count(marks) from student ;
 select sum(marks) from student ;
 select avg(marks) from student ;
 
+select intake, count(id) from student group by intake;
+
 
 select * from teacher ;
 
